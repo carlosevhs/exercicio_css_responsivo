@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: roboto, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 16px;
+}
+header h1 {
+    font-size: 48px;
+}
+
+.menu li {
+    display: inline;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 16px;
+    font-weight: bold;
+}
+
+.container {
+    width: 1024px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-a-loja img {
+    max-width: 100%;
+    padding: 24px 0;
+    padding-right: 24px;
+}
+
+.sobre-a-loja p {
+    margin-bottom: 24px;
+}
+
+h2 {
+    padding-bottom: 16px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.651);
+}
+
+.produtos {
+    display: block;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(4,23.5%);
+    column-gap: 1%;
+}
+
+.lista-produtos img {
+    max-width: 100%;
+}
+
+.lista-produtos li {
+    list-style: none;
+}
+
+button {
+    padding: 8px;
+    background-color: rgb(13, 201, 54);
+    border: none;
+    border-radius: 6px;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}
+button:hover {
+    background-color: rgb(7, 158, 40);
+}
+
+footer {
+    background-color: #000;
+    margin: 16px 0;
+    padding: 24px;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+    .container{
+        max-width: 90%;
+    }
+    #sobre-a-loja {
+        display: block;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+    .sobre-a-loja img {
+        padding-right: 0;
+    }
+
+    .sobre-a-loja p, .lista-produtos {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: block;
+        max-width: 90%;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 98%;
+    }
+
+    .sobre-a-loja img {
+        padding-right: 0;
+    }
+}
